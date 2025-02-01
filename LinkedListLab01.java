@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Main {
+class LinkedListLab01 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
@@ -30,5 +30,6 @@ class Main {
         
         
         // System.out.println(num1);
+        scan.close();
     }
 }
