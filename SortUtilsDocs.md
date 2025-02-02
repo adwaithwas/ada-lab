@@ -20,24 +20,9 @@ SortUtils.printArray(arrayName);
 prints the array.
 
 ## Time Calculation
-```
-tellTime(startTime, endTime, unit);
-```
-> long startTime --> start time
-can be calculated using:
-```
-long startTime = System.nanoTime();
-```
-
-> long endTime --> end time
-can be calculated using:
-```
-long endTime = System.nanoTime();
-```
-
-> char unit --> unit for time
-can be 's' for seconds, 'm' for milliseconds, 'n' for nanoseconds
-**default case** also returns time in nano seconds 
+- `long startTime` → Start time (Can be calculated using `System.nanoTime();`)
+- `long endTime` → End time (Can be calculated using `System.nanoTime();`)
+- `char unit` → Unit for time (`'s'` for seconds, `'m'` for milliseconds, `'n'` for nanoseconds)
 
 ## How to Compile?
 ```
