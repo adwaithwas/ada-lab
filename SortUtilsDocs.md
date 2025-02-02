@@ -25,7 +25,8 @@ tellTime(startTime, endTime, unit);
 ```
 - `long startTime` → Start time (Can be calculated using `System.nanoTime();`)
 - `long endTime` → End time (Can be calculated using `System.nanoTime();`)
-- `char unit` → Unit for time (`'s'` for seconds, `'m'` for milliseconds, `'n'` for nanoseconds)
+- `char unit` → Unit for time (`'s'` for seconds, `'m'` for milliseconds, `'n'` for nanoseconds, default case also returns nanoseconds)
+
 
 ## How to Compile?
 ```batch
@@ -33,3 +34,4 @@ cd ada-lab
 javac .\sorting_algos\SortUtils.java .\sorting_algos\<FileName.java>
 java sorting_algos.MergeSort
 ```
+**Note:** Replace `<FileName.java>` with the name of your Java file.
