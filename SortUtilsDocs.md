@@ -30,6 +30,6 @@ tellTime(startTime, endTime, unit);
 ## How to Compile?
 ```batch
 cd ada-lab
-javac .\sorting_algos\RandomUtils.java .\sorting_algos\MergeSort.java
+javac .\sorting_algos\SortUtils.java .\sorting_algos\<FileName.java>
 java sorting_algos.MergeSort
 ```
