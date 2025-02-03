@@ -31,7 +31,7 @@ tellTime(startTime, endTime, unit);
 ## How to Compile?
 ```batch
 cd ada-lab
-javac .\sorting_algos\SortUtils.java .\sorting_algos\<FileName.java>
-java sorting_algos.MergeSort
+javac .\sorting_algos\SortUtils.java .\sorting_algos\<FileName>.java
+java sorting_algos.<FileName>
 ```
 **Note:** Replace `<FileName.java>` with the name of your Java file.
