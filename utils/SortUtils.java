@@ -1,4 +1,4 @@
-package sorting_algos;
+package utils;
 
 import java.util.Random;
 import java.util.Arrays;

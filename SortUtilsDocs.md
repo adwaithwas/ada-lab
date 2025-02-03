@@ -1,6 +1,9 @@
 # Sorting Utils
 sorting utils package contains all the necessary functions required while writing sorting algorithms,
 so that you can focus on writing the algorithm part and let Utils take care of everything else.
+`import utils.*SortUtils*;` to import the library into file.
+Available modules include:
+- `SortUtils` : This module contains all the necessary functions required while writing sorting algorithms.
 
 ## Random Array
 ```java
@@ -31,7 +34,7 @@ tellTime(startTime, endTime, unit);
 ## How to Compile?
 ```batch
 cd ada-lab
-javac .\sorting_algos\SortUtils.java .\sorting_algos\<FileName>.java
-java sorting_algos.<FileName>
+javac -d . utils/SortUtils.java sorting_algos/<FILE_NAME>.java
+java sorting_algos.<FILE_NAME>
 ```
-**Note:** Replace `<FileName.java>` with the name of your Java file.
+**Note:** Replace `<FILE_NAME>` with the name of your Java file.

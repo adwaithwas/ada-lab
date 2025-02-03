@@ -1,5 +1,7 @@
 package sorting_algos;
 
+import utils.SortUtils;
+
 class MergeSort{
     public static void main(String[] args) {
         //creating an array
