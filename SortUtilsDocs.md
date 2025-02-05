@@ -24,10 +24,12 @@ SortUtils.printArray(arrayName);
 
 ## Time Calculation
 ```java
-tellTime(startTime, endTime, unit);
+tellTime(startTime, endTime);
 ```
 - `long startTime` → Start time (Can be calculated using `System.nanoTime();`)
 - `long endTime` → End time (Can be calculated using `System.nanoTime();`)
+<br><hr><hr>
+**you can also specifiy what unit you want by passing it as a char parameter**
 - `char unit` → Unit for time (`'s'` for seconds, `'m'` for milliseconds, `'n'` for nanoseconds, **default** case also returns nanoseconds)
 
 
