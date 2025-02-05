@@ -39,4 +39,8 @@ public class SortUtils {
                 System.out.println("Time Taken: " + timeTaken + " nano seconds");
         }
     }
+
+    public static void tellTime(long startTime, long endTime){
+        tellTime(startTime, endTime, ' ');
+    }
 }

@@ -18,7 +18,7 @@ public class SelectionSort {
      SortUtils.printArray(array);
 
     //printing time taken
-    SortUtils.tellTime(start, end, ' ');
+    SortUtils.tellTime(start, end);
    }
 
    private static void selectionSort(int[] array){
