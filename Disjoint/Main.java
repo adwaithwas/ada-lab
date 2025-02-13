@@ -1,3 +1,4 @@
+package Disjoint;
 import java.util.Arrays;
 
 class Disjoint{
@@ -27,4 +28,3 @@ class Main{
         System.out.println(dis.find(7)); //parent of 5
         
     }
-}
