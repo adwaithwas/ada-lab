@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+
+class Main{
+    public static void main(String[] Args){
+        LinkedList<Integer> l1 = new LinkedList<>();
+        LinkedList<Integer> l2 = new LinkedList<>();
+        l1.add(1); l1.add(2); l1.add(3);
+        l2.add(1); l2.add(2); l2.add(3);
+    
+        System.out.println(merge(l1, l2));
+        
+    }
+    
+    private static LinkedList<Integer> merge(LinkedList<Integer> l1, LinkedList<Integer> l2){
+        LinkedList<Integer> newL = new LinkedList<>();
+        int i=0; int j=0;
+        while(i<l1.size() && j<l2.size()){
+            if (l1.get(i)<l2.get(j)){
+                newL.add(l1.get(i));
+                i++;
+            } else {
+                newL.add(l2.get(j));
+                j++;
+            }
+        }
+        while(i<l1.size()){
+            newL.add(l1.get(i));
+            i++;
+        }
+        while(j<l2.size()){
+            newL.add(l2.get(j));
+            j++;
+        }
+        return newL;
+    }
+}
