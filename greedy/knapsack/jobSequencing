@@ -1,0 +1,26 @@
+def jobSequencing(jobs):
+    jobs.sort(key= lambda x: x[2], reverse= True)
+    print(jobs)
+    
+    maxDeadline = max(job[1] for job in jobs)
+    
+    timeline = [-1] * (maxDeadline + 1)
+    totalProfit = 0
+    
+    for job in jobs:
+        jobID, jobDeadline, jobProfit = job
+        
+        for j in range(min(maxDeadline, jobDeadline), 0, -1):
+            if timeline[j] == -1:
+                timeline[j] = jobID
+                totalProfit += jobProfit
+                
+    scheduledJobs = [job for job in timeline if job != -1]
+    return totalProfit, scheduledJobs
+
+
+jobs = [("j1", 4, 20), ("j2", 1, 10), ("j3", 1, 40), ("j4", 1, 30)] #name, deadline, profit
+print(f"job list:   {jobs}")
+totalProfit, scheduledJobs = jobSequencing(jobs)
+
+print(f"total profit = {totalProfit} and scheduled jobs = {scheduledJobs}")
