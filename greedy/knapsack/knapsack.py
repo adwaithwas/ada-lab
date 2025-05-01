@@ -1,14 +1,30 @@
-def knapsack(jobs, totalCapacity):
-    jobs.sort(key=lambda x: x[0]/x[1], reverse=True)
-    sortedJobs, totalWeight, totalProfit = [], 0, 0
+# fractional knapsack
+def f_knapsack(jobs, total_capacity):
+    jobs.sort(key=lambda x: x[1]/x[0], reverse=True)
+    sorted_jobs, total_weight, total_profit = [], 0, 0
+    
     for job in jobs:
-        if (job[0] + totalWeight) <= totalCapacity:
-            totalWeight += job[0]
-            sortedJobs.append(job[2])
-    return sortedJobs, totalWeight
+        weight, profit, name = job
+        
+        if total_capacity >= weight:
+            total_capacity -= weight
+            total_profit += profit
+            total_weight += weight
+            sorted_jobs.append(name + '(1.0)')
+        else:
+            fraction = total_capacity / weight
+            total_profit += profit * fraction
+            total_weight += total_capacity
+            sorted_jobs.append(name + f'({fraction:.2f})')
+            break
+        
+    
+    return total_profit, total_weight, sorted_jobs
 
-#weights, profit, name
-jobs = [(10, 60, '1'), (20, 100, '2'), (20, 120, '3')]
-totalCapacity = 50
-sortedJobs, totalWeight = knapsack(jobs, totalCapacity)
-print(f"sorted jobs:    {sortedJobs}")
+# weights, profit, name
+jobs = [(10, 60, 'job1'), (20, 100, 'job2'), (20, 120, 'job3')]
+total_capacity = 32
+
+total_profit, total_weight, sorted_jobs = f_knapsack(jobs, total_capacity)
+print(f'total profit = {total_profit} and total weight = {total_weight}')
+print(f'sorted jobs : {sorted_jobs}')
